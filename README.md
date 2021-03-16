@@ -1,1 +1,1 @@
-Repositório referente aos exercios da trybe.
+Repositório referente aos exercicios da trybe.
