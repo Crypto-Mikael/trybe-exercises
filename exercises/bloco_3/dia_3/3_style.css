@@ -1,0 +1,9 @@
+h1, p{
+    text-align: center;
+}
+li:hover {
+    background-color: gray;
+}
+li:active {
+    font-size: 40px; 
+}
