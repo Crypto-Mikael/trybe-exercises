@@ -1,0 +1,21 @@
+ol{
+background-color: yellow;
+}
+.par{
+color: green;
+}
+.primo{
+text-transform: uppercase;
+}
+.headings{
+color: red;    
+
+}
+.font-italy{
+font-size: 40px;
+padding: 1px;  
+}
+
+li{
+    font-size: 20px;
+}
