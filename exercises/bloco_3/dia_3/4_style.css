@@ -29,3 +29,23 @@ color :blue;
 .java{
     color: pink;
 }
+.stack_theme:hover{
+    color: orange;
+    font-weight: 400;
+}
+.w3s_theme:hover{
+    color: green;
+    font-weight: 400;
+}
+.developer_theme:hover{
+    color:black;
+    font-weight: 400;
+}
+.devdocs_theme:hover{
+    color: yellow;
+    font-weight: 400;
+}
+.trybe_theme:hover{
+    color: green;
+    font-weight: 400;
+}
