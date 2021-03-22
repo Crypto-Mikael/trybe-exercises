@@ -31,3 +31,9 @@ h1{
     display: inline-block;
     margin-left: 2px;
 }
+.Section-Body{
+    text-align: center;
+}
+.section-inline{
+    display: inline;
+}
