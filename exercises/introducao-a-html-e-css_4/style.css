@@ -1,0 +1,42 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+h1, h4{
+    margin: 0 0 20px;
+}
+p ,ul,ol{
+    margin-bottom: 5px;
+}
+.images{
+width: 400px;
+vertical-align: text-bottom;
+}
+.main_cont{
+    width: 66%;
+    display: inline-block;
+}
+.section-myint{
+
+}
+.allsections{
+
+}
+.Refers{
+
+}
+.head{
+    
+}
+.side-bar {
+    background-color: lightgrey;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.article {
+    padding: 15px;
+}
