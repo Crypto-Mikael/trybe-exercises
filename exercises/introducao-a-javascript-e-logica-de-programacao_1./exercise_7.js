@@ -1,4 +1,5 @@
-let porcentagem = 50;
+let porcentagem = 100;
+
 if (porcentagem > 100 || porcentagem < 0) {
     console.log('ERRO')
 } 
