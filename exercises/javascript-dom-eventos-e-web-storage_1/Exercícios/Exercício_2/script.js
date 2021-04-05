@@ -1,5 +1,23 @@
-   
-   
+  function changemyfuture() {
+    let myfuture = document.getElementsByTagName('p')[1];
+    myfuture.innerHTML = 'Um belo Programador!!'
+  }
+
+  function blockYellowColorChanger() {
+    let colorchanger = document.getElementsByTagName('div')[0];
+    colorchanger.style.backgroundColor = 'rgb(76,164,109)'
+  }
+
+  function blockRedColorChanger() {
+    let colorchanger = document.getElementsByTagName('div')[1];
+    colorchanger.style.backgroundColor = 'white'
+  }
+
+  function correctionTextIntroduction(){
+    let textchanger = document.getElementsByTagName('h1')[0]
+    textchanger.innerText = 'A escola que te ensina a programar, a aprender e atrabalhar.'
+  }
+  
    
    
    
