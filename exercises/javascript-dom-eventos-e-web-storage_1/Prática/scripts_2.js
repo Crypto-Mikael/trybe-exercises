@@ -1,0 +1,1 @@
+let guitar_musician = document.getElementsByClassName('musician');
