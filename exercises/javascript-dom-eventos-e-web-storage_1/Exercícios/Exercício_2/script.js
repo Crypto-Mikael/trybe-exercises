@@ -13,9 +13,24 @@
     colorchanger.style.backgroundColor = 'white'
   }
 
-  function correctionTextIntroduction(){
+  function correctionTextIntroduction() {
     let textchanger = document.getElementsByTagName('h1')[0]
     textchanger.innerText = 'A escola que te ensina a programar, a aprender e atrabalhar.'
+  }
+  
+  function uppercaseParagraphs() {
+    let pharagraphs = document.getElementsByTagName('p')
+    for (index = 0; index < pharagraphs.length; index += 1) {
+      pharagraphs = pharagraphs[index]
+      pharagraphs.innerHTML = pharagraphs.innerHTML.toUpperCase();
+    }
+  }
+
+  function showallParagraphs() {
+    let pharagraphs = document.getElementsByTagName('p')
+    for (index = 0; index < pharagraphs.length; index += 1) {
+      console.log(pharagraphs[index].innerText);
+    }
   }
   
    
