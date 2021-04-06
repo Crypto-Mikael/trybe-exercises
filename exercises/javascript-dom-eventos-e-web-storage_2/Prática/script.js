@@ -21,4 +21,6 @@ document.getElementById('elementoOndeVoceEsta').parentNode.innerText
 // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
 document.getElementById('elementoOndeVoceEsta').parentNode.childNodes[5]
 
+// 8.Agora acesse o terceiroFilho a partir de pai.
+document.getElementById('pai').childNodes[5]
 
