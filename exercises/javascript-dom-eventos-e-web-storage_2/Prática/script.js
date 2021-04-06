@@ -44,5 +44,13 @@ divElement3.appendChild(divCreator).id = 'filhoDoPrimeiroFilhoDoFilho'
 // 4. A partir desse filho criado, acesse terceiroFilho.
 document.getElementById('filhoDoPrimeiroFilhoDoFilho').parentNode.parentNode.parentNode[5]
 
+// Parte III
 
+// 1. Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho.
+let divPai = document.getElementById('pai')
+divPai.removeChild(primeiroFilho)
+divPai.removeChild(terceiroFilho)
+divPai.removeChild(quartoEUltimoFilho)
+let lastdivPai = document.getElementById('pai').childNodes
+divPai.removeChild(segundoEUltimoFilhoDoFilho)
 
