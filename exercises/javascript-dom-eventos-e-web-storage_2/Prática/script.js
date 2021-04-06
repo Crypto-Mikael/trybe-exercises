@@ -10,7 +10,10 @@ let grandchildtxt = document.getElementById('primeiroFilhoDoFilho')
 grandchildtxt.innerHTML = 'Eu sou um neto muito querido.'
 
 // 4. Acesse o primeiroFilho a partir de pai.
-let firstson = document.getElementById('pai').childNodes[1]
+document.getElementById('pai').childNodes[1]
+
+// 5.Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta').parentNode.childNodes[1]
 
 
 
