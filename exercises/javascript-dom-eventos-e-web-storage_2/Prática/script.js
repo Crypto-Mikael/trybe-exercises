@@ -30,9 +30,19 @@ document.getElementById('pai').childNodes[5];
 
 // 1. Crie um irmão para elementoOndeVoceEsta.
 let divCreator = document.createElement('div');
-let addDivOnElement = document.querySelector('#elementoOndeVoceEsta').appendChild(divcreator);
+let divElement = document.getElementById('pai')
+divElement.appendChild(divCreator).id = 'irmaoElementoOndeVoceEsta'
 
+// 2. Crie um filho para elementoOndeVoceEsta.
+let divElement2 = document.getElementById('elementoOndeVoceEsta')
+divElement2.appendChild(divCreator).id = 'filhoElementoOndeVoceEsta'
 
+// 3. Crie um filho para primeiroFilhoDoFilho.
+let divElement3 = document.getElementById('primeiroFilhoDoFilho')
+divElement3.appendChild(divCreator).id = 'filhoDoPrimeiroFilhoDoFilho'
+
+// 4. A partir desse filho criado, acesse terceiroFilho.
+document.getElementById('filhoDoPrimeiroFilhoDoFilho').parentNode.parentNode.parentNode[5]
 
 
 
