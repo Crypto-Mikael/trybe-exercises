@@ -18,4 +18,7 @@ document.getElementById('elementoOndeVoceEsta').parentNode.childNodes[1]
 // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
 document.getElementById('elementoOndeVoceEsta').parentNode.innerText
 
+// 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta').parentNode.childNodes[5]
+
 
