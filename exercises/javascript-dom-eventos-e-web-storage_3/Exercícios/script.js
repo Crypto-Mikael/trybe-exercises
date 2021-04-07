@@ -48,9 +48,19 @@ function createDaysOfTheWeek() {
       else if (daysListItem.innerText === '25') {
         daysListItem.classList.add(['friday']) 
       }
-      
+
       month.appendChild(daysListItem);
     };
   };
 
   creatDayOfTheCalendar()
+
+  function DayOfHolidaysOnCalendar(holidays) {
+    let button = document.createElement('button')
+    let buttonBlock = document.querySelector('.buttons-container')
+    button.id = 'btn-holiday'
+    button.innerHTML = holidays
+    buttonBlock.appendChild(button)
+
+  }
+  DayOfHolidaysOnCalendar('Feriados')
