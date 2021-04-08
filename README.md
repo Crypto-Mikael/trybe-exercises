@@ -1,1 +1,1 @@
-Atenção nenhum dos codigos digitados forma meus só copiei para analise e facil acesso.
+Atenção nenhum dos codigos digitados foram meus só copiei para analise e facil acesso.
