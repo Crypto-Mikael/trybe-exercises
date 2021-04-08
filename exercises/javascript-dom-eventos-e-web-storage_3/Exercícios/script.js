@@ -116,7 +116,7 @@ function createDaysOfTheWeek() {
     clickEventButtonFriday()
 
     function TextOfCalendarZoom() {
-      let mouseOverDay = document.querySelectorAll('.day')
+      let mouseOverDay = document.querySelectorAll('.day');
       for (let index = 0; index < mouseOverDay.length; index += 1) {
       
       mouseOverDay[index].addEventListener('mouseover', mouseover);
@@ -130,6 +130,14 @@ function createDaysOfTheWeek() {
     }
     }
     TextOfCalendarZoom()
+
+    function CalendarSpanCreator(assignment) {
+      let divStorageSpan = document.querySelector('.my-tasks');
+      let spanCreator = document.createElement('span');
+      spanCreator.innerHTML = [assignment];
+      divStorageSpan.appendChild(spanCreator);
+    }
+    CalendarSpanCreator('cozinhar')
 
 
 
