@@ -119,9 +119,14 @@ function createDaysOfTheWeek() {
       let mouseOverDay = document.querySelectorAll('.day')
       for (let index = 0; index < mouseOverDay.length; index += 1) {
       
-      mouseOverDay[index].addEventListener('mouseover', function () {
-        mouseOverDay[index].style.zoom = '400px'
-      });
+      mouseOverDay[index].addEventListener('mouseover', mouseover);
+      mouseOverDay[index].addEventListener('mouseleave', mouseleave);
+      function mouseover() {
+        mouseOverDay[index].style.zoom = '150%';
+      };
+      function mouseleave() {
+        mouseOverDay[index].style.zoom = '100%';
+      };
     }
     }
     TextOfCalendarZoom()
