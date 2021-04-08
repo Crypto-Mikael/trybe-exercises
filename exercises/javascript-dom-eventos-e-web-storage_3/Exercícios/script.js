@@ -98,20 +98,33 @@ function createDaysOfTheWeek() {
   function clickEventButtonFriday() {
     let clickPress = document.querySelector('#btn-friday')
     let allFriday = document.querySelectorAll('.friday')
-    let newcolor = '#eee';
-    let oldcolor = 'white';
+    let newtext = '/*Sextou'
+    let oldtext = []
+    for (let index = 0; index < allFriday.length; index += 1) {
+      oldtext.push(allFriday[index].textContent)
+    }
     clickPress.addEventListener('click', function () {
-      for (let index = 0; index < allFriday.length; index += 1) {
-        if (allFriday[index].style.backgroundColor === oldcolor) {
-          allFriday[index].style.backgroundColor = newcolor;
+      for (let index = 0; index < allFriday.length; index += 1)
+        if (allFriday[index].innerHTML === oldtext[index]) {
+          allFriday[index].innerHTML = newtext;
         } else {
-          allFriday[index].style.backgroundColor = oldcolor;
+          allFriday[index].innerHTML = oldtext[index];
         }
-      }
-    });
-    
+      });
+    // Material consultado : https://stackoverflow.com/questions/29089467/queryselectorall-print-textcontent-of-all-nodes
     }
     clickEventButtonFriday()
+
+    function TextOfCalendarZoom() {
+      let mouseOverDay = document.querySelectorAll('.day')
+      for (let index = 0; index < mouseOverDay.length; index += 1) {
+      
+      mouseOverDay[index].addEventListener('mouseover', function () {
+        mouseOverDay[index].style.zoom = '400px'
+      });
+    }
+    }
+    TextOfCalendarZoom()
 
 
 
