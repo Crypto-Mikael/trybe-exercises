@@ -55,12 +55,36 @@ function createDaysOfTheWeek() {
 
   creatDayOfTheCalendar()
 
+  // Implemente uma função que adicione ao botão.
+
   function DayOfHolidaysOnCalendar(holidays) {
     let button = document.createElement('button')
     let buttonBlock = document.querySelector('.buttons-container')
-    button.id = 'btn-holiday'
-    button.innerHTML = holidays
-    buttonBlock.appendChild(button)
+    button.id = 'btn-holiday';
+    button.innerHTML = holidays;
+    buttonBlock.appendChild(button);
 
   }
   DayOfHolidaysOnCalendar('Feriados')
+
+  function clickEventButton() {
+  let clickPress = document.querySelector('#btn-holiday')
+  let allholidays = document.querySelectorAll('.holiday')
+  clickPress.addEventListener('click', function () {
+    for (let index = 0; index < allholidays.length; index += 1) {
+      allholidays[index].style.backgroundColor = 'gray';
+    }
+
+  });
+  
+  }
+  clickEventButton()
+
+  function fridayButton(friday) {
+    let button = document.createElement('button')
+    let buttonBlock = document.querySelector('.buttons-container')
+    button.id = 'btn-friday';
+    button.innerHTML = friday
+    buttonBlock.appendChild(button)
+  }
+  fridayButton('Sexta-feira')
