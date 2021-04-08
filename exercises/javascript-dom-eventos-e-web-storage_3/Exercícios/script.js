@@ -66,19 +66,25 @@ function createDaysOfTheWeek() {
 
   }
   DayOfHolidaysOnCalendar('Feriados')
+// Material consultado poís é 00:00;
 
-  function clickEventButton() {
+  function clickEventButtonHolidays() {
   let clickPress = document.querySelector('#btn-holiday')
-  let allholidays = document.querySelectorAll('.holiday')
+  let allHolidays = document.querySelectorAll('.holiday')
+  let newcolor = '#eee';
+  let oldcolor = 'white';
   clickPress.addEventListener('click', function () {
-    for (let index = 0; index < allholidays.length; index += 1) {
-      allholidays[index].style.backgroundColor = 'gray';
+    for (let index = 0; index < allHolidays.length; index += 1) {
+      if (allHolidays[index].style.backgroundColor === oldcolor) {
+        allHolidays[index].style.backgroundColor = newcolor;
+      } else {
+        allHolidays[index].style.backgroundColor = oldcolor;
+      }
     }
-
   });
   
   }
-  clickEventButton()
+  clickEventButtonHolidays()
 
   function fridayButton(friday) {
     let button = document.createElement('button')
@@ -87,4 +93,25 @@ function createDaysOfTheWeek() {
     button.innerHTML = friday
     buttonBlock.appendChild(button)
   }
-  fridayButton('Sexta-feira')
+  fridayButton('Sexta-feira');
+
+  function clickEventButtonFriday() {
+    let clickPress = document.querySelector('#btn-friday')
+    let allFriday = document.querySelectorAll('.friday')
+    let newcolor = '#eee';
+    let oldcolor = 'white';
+    clickPress.addEventListener('click', function () {
+      for (let index = 0; index < allFriday.length; index += 1) {
+        if (allFriday[index].style.backgroundColor === oldcolor) {
+          allFriday[index].style.backgroundColor = newcolor;
+        } else {
+          allFriday[index].style.backgroundColor = oldcolor;
+        }
+      }
+    });
+    
+    }
+    clickEventButtonFriday()
+
+
+
