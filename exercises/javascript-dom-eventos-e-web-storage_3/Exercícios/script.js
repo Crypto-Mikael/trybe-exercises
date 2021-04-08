@@ -66,6 +66,7 @@ function createDaysOfTheWeek() {
 
   }
   DayOfHolidaysOnCalendar('Feriados')
+
 // Material consultado poís é 00:00;
 
   function clickEventButtonHolidays() {
@@ -131,13 +132,24 @@ function createDaysOfTheWeek() {
     }
     TextOfCalendarZoom()
 
-    function CalendarSpanCreator(assignment) {
+    function calendarSpanCreator(assignment) {
       let divStorageSpan = document.querySelector('.my-tasks');
       let spanCreator = document.createElement('span');
       spanCreator.innerHTML = [assignment];
       divStorageSpan.appendChild(spanCreator);
     }
-    CalendarSpanCreator('cozinhar')
+    calendarSpanCreator('cozinhar')
+
+    function subtitleColorSelector(color) {
+      let divStoragesubtitle = document.querySelector('.my-tasks');
+      let colorCreator = document.createElement('div');
+      colorCreator.className = 'task'
+      colorCreator.style.backgroundColor = color
+      divStoragesubtitle.appendChild(colorCreator)
+    }
+    subtitleColorSelector('magenta')
+
+
 
 
 
