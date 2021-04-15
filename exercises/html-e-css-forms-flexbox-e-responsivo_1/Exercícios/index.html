@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Cadastro de Currículo</h1>
+  <fieldset id="personal-datebase">
+    <form action="" method="GET" enctype="multipart/form-data">
+      <label> Nome Completo
+        <input type="text" name="nome" maxlength="40" required>
+      </label>
+        <br>
+      <label for=""> E-mail
+        <input type="text" name="e-mail" maxlength="50" required>
+      </label>
+        <br>
+      <label for=""> CPF
+        <input type="text" name="cpf" maxlength="11" required>
+      </label>
+        <br>
+      <label for=""> Endereço
+        <input type="text" name="endereço" maxlength="200" required>
+      </label>
+        <br>
+      <label for=""> Cidade
+        <input type="text" name="cidade" maxlength="28" required>
+      </label>
+        <br>
+      <label> Estados
+      <select name="Estados" id="states">
+      </select>
+      </label>
+        <br>
+      <input type="radio" name="radio-button"> Casa
+      <input type="radio" name="radio-button"> Apartamento
+    </form>
+  </fieldset>
+  <fieldset id="last-work">
+    <label for=""> Resumo do seu currículo
+      <textarea maxlength="1000" required></textarea>
+    </label>
+      <br>
+      <br>
+    <label> Cargo
+      <input type="text" name="cargo" maxlength="40" required>
+    </label>
+    <br>
+    <label for=""> Descrição do Cargo
+      <input type="text" name="descrição-do-cargo" required>
+    </label>
+    <br>
+
+  </fieldset>
+  <script src="script.js"></script>
+</body>
+</html>
