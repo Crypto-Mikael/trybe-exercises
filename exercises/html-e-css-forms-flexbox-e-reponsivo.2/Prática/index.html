@@ -1,17 +1,76 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1></h1>
+    <h1>Cadastro de Currículo</h1>
   </header>
-  
-<script src="script.js"></script>
+  <main class="container">
+  <form action="" method="GET" enctype="multipart/form-data">
+    <section id="user-info">
+    <h2> Informações Pessoais</h1>
+    <fieldset id="personal-datebase">
+      <label> Nome Completo
+        <input type="text" name="nome" maxlength="40" placeholder="Digite seu nome" required>
+      </label>
+        <br>
+      <label for=""> E-mail
+        <input type="email" name="e-mail" maxlength="50"  placeholder="Digite seu e-mail" required>
+      </label>
+        <br>
+      <label for=""> CPF
+        <input type="text" name="cpf" maxlength="11" placeholder="000.000.000.00" required>
+      </label>
+        <br>
+      <label for=""> Endereço
+        <input type="text" name="endereço" maxlength="200" required>
+      </label>
+        <br>
+      <label for=""> Cidade
+        <input type="text" name="cidade" maxlength="28" required>
+      </label>
+        <br>
+      <label> Estados
+      <select name="Estados" id="states">
+      </select>
+      </label>
+        <br>
+      <input type="radio" name="radio-button"> Casa
+      <input type="radio" name="radio-button"> Apartamento
+    </fieldset>
+    </section>
+    <section id="lastwork-info">
+    <h2>Ultima experiência</h2>
+    <fieldset id="last-work">
+    <label for=""> Resumo do seu currículo
+      <textarea maxlength="1000" required></textarea>
+    </label>
+      <br>
+      <br>
+    <label> Cargo
+      <input type="text" name="cargo" maxlength="40" required>
+    </label>
+    <br>
+    <label for=""> Descrição do Cargo
+      <input type="text" name="descrição-do-cargo" required>
+    </label>
+    <br>
+    <label for=""> Data de Inicio
+      <input type="date" name="data-de-inicio" required>
+    </label>
+    <br>
+    </fieldset>
+    </section>
+    <section id='the_button'>
+      <button type="submit">Criar Form</button>
+    </section>
+  </form>
+  </main>
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
