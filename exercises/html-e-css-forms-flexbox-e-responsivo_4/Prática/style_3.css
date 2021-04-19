@@ -1,4 +1,3 @@
-
 .box-one {
   color: #9069EF;
   background-color: rgb(243, 243, 243);
@@ -35,5 +34,5 @@
 .box-container {
   background-color: #0fa36b;
   display: flex;
-  /* ADICIONE AQUI SEUS TESTES */
+  align-items: baseline;
 }
