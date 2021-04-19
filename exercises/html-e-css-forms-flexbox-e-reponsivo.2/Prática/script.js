@@ -35,6 +35,9 @@ function creatOptions() {
   }
   creatOptions();
 
+
+document.querySelector('.control').DatePickerX.init()
+
 function preventDefautOptions() {
     
 }
