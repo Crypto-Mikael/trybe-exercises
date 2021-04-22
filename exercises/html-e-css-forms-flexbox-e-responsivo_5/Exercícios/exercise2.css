@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px 20px;
+  font-size: 20px;
+}
+
+header {
+  font-size: x-large;
+  display: flex;
+  flex: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+header p {
+  max-width: 35
+  0px;
+}
+
+nav ul {
+ display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.aside-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: red;
+  }
+  header ul {
+    display: none;
+  }
+}
