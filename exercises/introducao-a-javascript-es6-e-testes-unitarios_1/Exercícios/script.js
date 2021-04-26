@@ -13,6 +13,6 @@
 // testingScope(true);
 
 
-const testingScope2 = (escopo) => escopo === true ? console.log(`Não devo ser utilizada fora do meu escopo`) : console.log(`Ótimo, fui utilizada no escopo !`)
+const testingScope = (escopo) => escopo === true ? console.log(`Ótimo, fui utilizada no escopo !`)  : console.log(`Não devo ser utilizada fora do meu escopo`);
 
-testingScope2(false);
+testingScope(false);
