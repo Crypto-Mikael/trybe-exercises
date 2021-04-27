@@ -52,11 +52,6 @@ const orderModifier = (order) => {
     deliveryPerson: 'Luiz Silva',
   }
   Object.assign(nameOfTheDelivery, newDelivery);
-  let totalPayment = Object.values(order)[4];
-  let newPayment = {
-    total: 50,
-  }
-  Object.assign(totalPayment, newPayment);
   let typeOfPizza = Object.values(order)[3].pizza;
   let newPizzas = {
         muzzarella: {
@@ -69,10 +64,12 @@ const orderModifier = (order) => {
     },
   }
   Object.assign(typeOfPizza, newPizzas);
-  
-
-  console.log(typeOfPizza)
-  console.log(`Olá ${nameOfTheDelivery.deliveryPerson} o total do seu pedido de`)
+  let calabresaPizza = Object.keys(Object.values(order)[3].pizza)[3];
+  let muzzarellaPizza = Object.keys(Object.values(order)[3].pizza)[2];
+  let cocaoGeladao = Object.values(order)[3].drinks.coke.type
+  let price = Object.values(order)[4].total = `R$ 50,00`
+  console.log('')
+  console.log(`Olá ${nameOfTheDelivery.deliveryPerson} o total do seu pedido de ${muzzarellaPizza}, ${calabresaPizza} e ${cocaoGeladao} é ${price}`)
 }
 
 orderModifier(order);
