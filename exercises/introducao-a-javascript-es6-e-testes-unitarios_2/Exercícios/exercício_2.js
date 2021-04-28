@@ -66,4 +66,3 @@ const allLessonsFunction = () => {
   console.log(alllesson)
 }
 //allLessonsFunction()
-
