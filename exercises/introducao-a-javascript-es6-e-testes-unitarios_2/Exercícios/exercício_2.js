@@ -36,3 +36,34 @@ const listKeysInObj = (obj) => {
 }
 
 listKeysInObj(lesson2)
+
+// Exercicio 3
+const listKeysInObjLenght = (obj) => {
+  const arrayObject = Object.keys(obj);
+    console.log(arrayObject.length);
+}
+
+// Exercicio 4
+const listKeysInObjItens = (obj) => {
+  let arrayObjectkeys = Object.keys(obj);
+  let arrayObjectvalue = Object.values(obj);
+  for(index in arrayObjectkeys) {
+    console.log(`
+    key = ${arrayObjectkeys[index]} 
+    value = ${arrayObjectvalue[index]}`)
+  }
+}
+
+//listKeysInObjItens (lesson2)
+
+//Exercicio 5
+const allLessonsFunction = () => {  
+  const alllesson = {
+    lesson1,
+    lesson2,
+    lesson3,
+  }
+  console.log(alllesson)
+}
+//allLessonsFunction()
+
