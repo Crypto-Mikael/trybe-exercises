@@ -7,10 +7,8 @@ function myFizzBuzz(num) {
   if (num % 5 === 0) return 'buzz';
   return num;
 }
-
-// implemente seus testes aqui
 assert.strictEqual(myFizzBuzz(15),'fizzbuzz')
 assert.strictEqual(myFizzBuzz(3),'fizz')
 assert.strictEqual(myFizzBuzz(5),'buzz')
-assert.notStrictEqual(myFizzBuzz(4),'fizzbuzz')
-assert.notDeepStrictEqual(myFizzBuzz(4),'fizzbuzz')
+assert.strictEqual(myFizzBuzz(4), 4)
+assert.notDeepStrictEqual(myFizzBuzz('fizzbuzz'),false)
