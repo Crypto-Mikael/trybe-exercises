@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const add = (a, b) => {a + b};
+const add = (a, b) => {return a + b};
 
 const expected = add(1, 2);
 
