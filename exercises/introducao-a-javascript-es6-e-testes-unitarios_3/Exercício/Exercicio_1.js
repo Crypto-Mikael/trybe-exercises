@@ -15,6 +15,4 @@ assert.strictEqual(expected, 9);
 expected = sum(0, 0);
 console.log(expected);
 
-assert.strictEqual(expected, 0);
-
-
+assert.throws(() => { sum(4, '5'); },'Erro: parameters must be numbers ')
