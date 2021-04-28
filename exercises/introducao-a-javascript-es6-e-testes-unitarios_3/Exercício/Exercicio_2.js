@@ -9,7 +9,13 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4])
+assert.notStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4])
 
-// implemente seus testes aqui
-let expected = myRemove([1, 2, 3, 4], 3);
-assert.strictEqual(expected,[1, 2, 4])
+
+
+
+const orginalArr = [1, 2, 3, 4, 5];
+myRemove(orginalArr, 5);
+assert.deepStrictEqual(orginalArr, [1, 2, 3, 4, 5]);
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4])
