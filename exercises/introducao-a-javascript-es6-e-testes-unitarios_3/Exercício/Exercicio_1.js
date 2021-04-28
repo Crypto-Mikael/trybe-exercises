@@ -7,12 +7,8 @@ function sum(a, b) {
 
   return a + b;
 }
-let expected = sum(4, 5);
-console.log(expected);
-
-assert.strictEqual(expected, 9);
-
-expected = sum(0, 0);
-console.log(expected);
-
-assert.throws(() => { sum(4, '5'); },'Erro: parameters must be numbers ')
+assert.strictEqual(typeof(sum), 'function');
+assert.strictEqual(sum(4, 5), 9);
+assert.strictEqual(sum(0,0),0);
+assert.throws(() => { sum(4, '5')});
+assert.throws(() => { sum(4, '5')}, /^Error: parameters must be numbers$/);

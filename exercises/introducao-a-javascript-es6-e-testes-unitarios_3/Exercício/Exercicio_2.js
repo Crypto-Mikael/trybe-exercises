@@ -11,3 +11,5 @@ function myRemove(arr, item) {
 }
 
 // implemente seus testes aqui
+let expected = myRemove([1, 2, 3, 4], 3);
+assert.strictEqual(expected,[1, 2, 4])
