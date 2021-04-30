@@ -33,8 +33,14 @@ const warriorDamager = () => {
   console.log(warrior.damage);
 }
 const mageDamager = () => {
-  mage.damage = Math.ceil(Math.random(1) * mage.strength) + mage.strength + mage.weaponDmg;
+  mage.damage = Math.ceil(Math.random(1) * mage.intelligence) + mage.intelligence * 2;
   console.log(mage.damage);
+  if (mage.mana < 15) {
+    console.log("Não Possui mana suficiente");
+  } else {
+    mage.mana -= 15;
+    console.log(mage.mana);
+  }
 }
 
-AttackMoment(dragonDamager);
+AttackMoment(mageDamager);
