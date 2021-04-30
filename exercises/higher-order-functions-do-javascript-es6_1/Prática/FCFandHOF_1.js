@@ -5,5 +5,5 @@ const coffeTime = () => console.log(`Bora tomar café!!`);
 const goodNight = () => console.log(`Partiu dormir!!`);
 // goodNight()
 
-const doingThings = (thing) => console.log(thing);
+const doingThings = () => console.log();
 doingThings(mornig())
