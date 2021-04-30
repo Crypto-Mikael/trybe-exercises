@@ -20,4 +20,21 @@ const dragon = {
 
 const battleMembers = { mage, warrior, dragon };
 
-const dragonDamage = () => Math.ceil(Math.random(1) * 15);
+const AttackMoment = (howattack) => {
+  howattack()
+}
+
+const dragonDamager = () => {
+  dragon.damage = Math.ceil(Math.random(1) * 15) + dragon.strength;
+  console.log(dragon.damage);
+}
+const warriorDamager = () => {
+  warrior.damage = Math.ceil(Math.random(1) * warrior.strength) + warrior.strength + warrior.weaponDmg;
+  console.log(warrior.damage);
+}
+const mageDamager = () => {
+  mage.damage = Math.ceil(Math.random(1) * mage.strength) + mage.strength + mage.weaponDmg;
+  console.log(mage.damage);
+}
+
+AttackMoment(dragonDamager);
