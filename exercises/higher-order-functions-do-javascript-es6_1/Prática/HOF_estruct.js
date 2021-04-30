@@ -4,8 +4,8 @@ const repeat = (number, action) => {
   }
 };
 
-repeat(3, (number) => {
-  if (number % 2 === 0) {
+repeat(8, (number) => {
+  if (number % 4 === 0) {
     console.log(number, 'is even');
   }
 });
