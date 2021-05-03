@@ -16,3 +16,4 @@ emailListInData.forEach((item, position, array) => {
   console.log(`Position is equal: ${position}`)
   console.log(`Number o email is equal: ${array.length - position}`)
 })
+
