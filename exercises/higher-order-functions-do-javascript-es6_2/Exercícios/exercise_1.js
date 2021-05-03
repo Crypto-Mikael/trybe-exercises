@@ -64,7 +64,10 @@ const books = [
 ];
 
 function authorBornIn1947() {
-  // escreva aqui o seu código
+  const isBornIn1947 = (year) => year.author.birthYear === 1947;
+  const objbooks = books.find(isBornIn1947);
+  return objbooks.author.name;
 }
+authorBornIn1947()
 
 assert.strictEqual(authorBornIn1947(), 'Stephen King');
