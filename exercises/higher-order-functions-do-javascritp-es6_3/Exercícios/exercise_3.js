@@ -107,7 +107,7 @@ const expectedResult = [
 ];
 
 function fantasyOrScienceFiction() {
-  // escreva seu código aqui
+  
 }
 
 assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult);
