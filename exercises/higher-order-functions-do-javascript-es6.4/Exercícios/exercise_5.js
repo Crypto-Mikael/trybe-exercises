@@ -7,12 +7,6 @@ const names = [
 ];
 function containsA() {
   const stringLettersAppart = names.join('').toLowerCase().split('')
-  const stringCountA = stringLettersAppart.reduce((acumulator,resultadoAtual) =>  {
-    if(resultadoAtual === 'a') {
-      acumulator += 1
-    }
-    return acumulator
-  },0)
-  return stringCountA
+  return stringLettersAppart.reduce((acumulator,resultadoAtual) => resultadoAtual === 'a' ? acumulator += 1 : acumulator += 0 ,0)
 }
 assert.deepStrictEqual(containsA(), 20);
