@@ -10,7 +10,7 @@ function studentAverage() {
   avgList.push(gradesAvg / 5)
   }
 
-  const ObjProducts = (avegraList,students) => avegraList.map((obj, index) => (
+  const ObjProducts = (avegraList,students) => avegraList.map((_, index) => (
     { name: avegraList[index],
       average: students[index]}
   ))
