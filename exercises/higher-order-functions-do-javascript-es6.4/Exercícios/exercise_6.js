@@ -7,7 +7,7 @@ function studentAverage() {
   const avgList = []
   for (let index = 0; index < grades.length; index += 1) {
   const gradesAvg = [grades[index].reduce((acumulator,actualNumber) => (actualNumber + acumulator),0)]
-  avgList.push(gradesAvg / 5)
+  avgList.push(gradesAvg / grades[index].length)
   }
 
   const ObjProducts = (avegraList,students) => avegraList.map((_, index) => (
