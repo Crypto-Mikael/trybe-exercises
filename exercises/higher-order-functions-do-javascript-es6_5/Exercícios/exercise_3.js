@@ -14,8 +14,10 @@ const gunnar = {
   nationality: 'Icelandic',
 };
 
+const { name, age, likes } = alex , gunnar
 
 const personLikes = () => `${name} is ${age} years old and likes ${likes.join(', ')}.`;
+console.log(personLikes)
 
 assert.strictEqual(personLikes(alex), 'Alex is 26 years old and likes fly fishing.');
 assert.strictEqual(personLikes(gunnar), 'Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.');
