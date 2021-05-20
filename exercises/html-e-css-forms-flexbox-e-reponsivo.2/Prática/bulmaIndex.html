@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  </head>
+  <body>
+    <form action="" method="GET" enctype="multipart/form-data">
+      <header class="container">
+        <h1 class="title has-text-centered">Cadastro de Currículo</h1>
+      </header>
+      <section class="section" id="personal-datebase">
+        <div class="field">
+          <label class="label">Nome</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite seu nome" required>
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">E-mail</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite seu e-mail">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">CPF</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite seu CPF">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">Endereço</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite seu endereço">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">Cidade</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite sua cidade">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">Estados</label>
+          <div class="control">
+            <div class="select">
+              <select id="states">
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="question">
+              Casa
+            </label>
+            <label class="radio">
+              <input type="radio" name="question">
+              Apartamento
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="lastwork-info">
+        <h1 class="title is-3 has-text-centered">Ultima experiência</h1>
+        <div class="field">
+          <label class="label">Resumo do seu currículo</label>
+          <div class="control">
+            <textarea class="textarea" placeholder=""></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Cargo</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Digite seu ultimo cargo">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">Descrição do Cargo</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="">
+            </div>
+        </div>
+        <div class="field">
+          <label class="label">Data de Inicio</label>
+            <div class="control">
+              <input class="input" type="date" placeholder="">
+            </div>
+        </div>
+        <button type="submit" class="button is-success">Enviar</button>
+      </section>
+    </form>
+    <script src="script.js"></script>
+    <script src="dist/js/DatePickerX.min.js"></script>
+  </body>
+</html>
