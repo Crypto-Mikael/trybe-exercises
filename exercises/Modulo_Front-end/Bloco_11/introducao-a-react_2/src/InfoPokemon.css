@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+}
+
+.pokedex {
+  flex-wrap: wrap;
+  margin: 10px 10px;
+}
+
+.pokemon_cotainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 25%;
+  margin: 10px 2px;
+  border: 4px solid gray;
+  border-radius: 1ch;
+}
