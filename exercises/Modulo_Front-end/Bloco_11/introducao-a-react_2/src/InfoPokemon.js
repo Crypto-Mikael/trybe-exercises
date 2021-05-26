@@ -8,12 +8,12 @@ class InfoPokemon extends Component {
 
     return (
       <div className='pokemon_cotainer'>
-        <div>
-          <p> { name } </p>
-          <p> { type } </p>
-          <p> { `${averageWeight.value} ${averageWeight.measurementUnit}` } </p>
-        </div>
-          <img src={ image } alt='Pokemons Images'/>
+          <div>
+            <p> { name } </p>
+            <p> { type } </p>
+            <p> { `${averageWeight.value} ${averageWeight.measurementUnit}` } </p>
+          </div>
+            <img src={ image } alt='Pokemons Images'/>
       </div>
     );
   }
