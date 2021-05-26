@@ -16,21 +16,31 @@
 
 .pokemon_cotainer {
   display: flex;
+  background-color: rgba(211, 211, 211, 0.904);
+  color: white;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   min-width: 25%;
   margin: 10px 2px;
   border: 4px solid gray;
   border-radius: 1ch;
 }
 
-@media screen and (max-width: 600px) {
+.image {
+  width: 150px;
+}
+
+.pokemon_cotainer:hover{
+  background-color: gray;
+}
+
+@media screen and (max-width: 720px) {
   .pokemon_cotainer {
     min-width: 45%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .pokemon_cotainer {
     min-width: 85%;
   }

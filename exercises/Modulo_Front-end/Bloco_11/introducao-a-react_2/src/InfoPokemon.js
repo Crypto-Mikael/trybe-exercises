@@ -13,7 +13,7 @@ class InfoPokemon extends Component {
             <p> { type } </p>
             <p> { `${averageWeight.value} ${averageWeight.measurementUnit}` } </p>
           </div>
-            <img src={ image } alt='Pokemons Images'/>
+            <img className='image' src={ image } alt='Pokemons Images'/>
       </div>
     );
   }
