@@ -1,31 +1,19 @@
 import React, { Component } from  'react';
 import './App.css';
-
+import Form from './Form'
 
 
 class App extends Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor() {
     super();  
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      numerosDeCliques: 0,
-      color: 'black'
-    }
-  }
-
-  handleClick() {
-    this.setState((estate, _props) => ({
-      numerosDeCliques: estate.numerosDeCliques + 1,
-      color: estate.numerosDeCliques % 2 ? 'green' : 'black',
-    }))
-    console.log(this.state.color)
   }
 
   render() {
     console.log(this)
     return (
       <div>
-        <button style={{color: this.state.color}} onClick={this.handleClick}>{this.state.numerosDeCliques}</button>
+        <Form />
       </div>
       );
   }
