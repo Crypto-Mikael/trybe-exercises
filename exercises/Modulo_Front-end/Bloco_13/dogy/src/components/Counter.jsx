@@ -4,8 +4,8 @@ export default class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dogyImage: '',
-      loading: 'loading...'
+      dogyImage: undefined,
+      loading: true,
     };
   }
 
@@ -15,18 +15,21 @@ export default class Counter extends Component {
     .then(json => {
       this.setState({
         dogyImage: json.message,
-        loading: undefined,
-      })
+        loading: false,
+      });
     });
   }
 
+  handleClick = () => {
+    
+  }
+
   render() {
-    const { dogyImage, loading } = this.state
+    const { dogyImage, loading } = this.state;
     return (
       <div className='photo'>
-        <h1>{ loading }</h1>
-        <button>DOGYYY</button>
-        <img src={dogyImage}></img>
+        { loading ? <span>loading...</span> : <img src={ dogyImage } alt='dogyyy'></img> }
+        <button onClick={}>DOGYYY</button>
       </div>
     );
   }
