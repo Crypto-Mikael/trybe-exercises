@@ -15,7 +15,7 @@ export default class Counter extends Component {
     .then(json => {
       this.setState({
         dogyImage: json.message,
-        loading: undefined
+        loading: undefined,
       })
     });
   }
