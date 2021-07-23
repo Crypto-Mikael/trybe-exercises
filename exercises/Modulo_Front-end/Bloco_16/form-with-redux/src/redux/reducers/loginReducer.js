@@ -1,5 +1,4 @@
 import * as dataUser from '../../dataUser'
-import { Redirect } from 'react-router'
 const ADMIN_USER = dataUser.admin.find((admin) => admin.email === 'ADMIN')
 const ADMIN_STATE = ADMIN_USER
 
