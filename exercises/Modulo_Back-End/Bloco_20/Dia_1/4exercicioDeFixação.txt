@@ -1,0 +1,21 @@
+Quantas senhas temos cadastradas nessa tabela?
+R:
+
+USE sakila;
+SELECT COUNT(password) FROM staff 
+WHERE password IS NOT NULL;
+
+
+Quantas pessoas temos no total trabalhando para nossa empresa?
+R:
+
+USE sakila;
+SELECT COUNT(staff_id) FROM staff 
+WHERE password IS NOT NULL;
+
+Quantos emails temos cadastrados nessa tabela?
+R:
+
+USE sakila;
+SELECT COUNT(email) FROM staff 
+WHERE password IS NOT NULL;
