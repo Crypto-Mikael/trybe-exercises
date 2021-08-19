@@ -1,0 +1,7 @@
+-- USE sakila;
+
+-- SELECT * FROM city
+-- SELECT first_name, last_name FROM customer;
+-- SELECT * from rental;
+-- SELECT title, description, release_year from film;
+-- SELECT * FROM sakila.actor
