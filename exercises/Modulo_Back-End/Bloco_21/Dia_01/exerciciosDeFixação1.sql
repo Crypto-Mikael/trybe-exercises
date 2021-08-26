@@ -9,7 +9,8 @@ ON c.actor_id = m.film_id;
 
 SELECT s.first_name, s.last_name, a.address_id
 FROM sakila.staff AS s
-INNER JOIN sakila.address AS a;
+INNER JOIN sakila.address AS a
+ON s.address_id = a.address_id;
 
 -- 3. Exiba o id do cliente , nome e email dos primeiros 100 clientes, ordenados pelo nome em ordem decrescente,
 -- juntamente com o id do endereço e o nome da rua onde o cliente mora.
@@ -28,6 +29,7 @@ SELECT c.first_name, c.email, a.address_id,
 a.address, a.district
 FROM sakila.customer c
 INNER JOIN sakila.address a
+ON c.address_id = a.address_id
 WHERE a.district = 'California'
 AND first_name LIKE '%rene%';
 
@@ -38,7 +40,8 @@ AND first_name LIKE '%rene%';
 SELECT s.first_name, c.address_id
 FROM sakila.staff s
 INNER JOIN sakila.customer c
-WHERE c.active = 1
+ON s.store_id = c.store_id
+WHERE c.active = 1 AND s.first_name = c.first_name
 ORDER BY s.first_name DESC;
 
 -- 6. Monte uma query que exiba o nome , sobrenome e a média de valor ( amount ) paga aos funcionários no ano de 2006.
