@@ -1,0 +1,8 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { },
+  {
+    $set: { sequels: 0}, 
+  },
+);
