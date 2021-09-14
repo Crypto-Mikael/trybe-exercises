@@ -1,0 +1,6 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { _id: ObjectId("613f84045817c0acfc6e73fa")},
+  { $rename: { budget: "estimatedBudget" } },
+);

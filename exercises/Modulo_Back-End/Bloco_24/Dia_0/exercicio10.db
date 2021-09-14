@@ -1,0 +1,12 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { _id: ObjectId("613f99008bfb78fefd0ba291")},
+  {
+    $currentDate: { 
+      lastUpdated: { 
+        $type: "timestamp" 
+      } 
+    }, 
+  },
+);

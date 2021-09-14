@@ -1,0 +1,8 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { },
+  {
+    $unset: { budget: "", estimatedBudget: "" }, 
+  },
+);

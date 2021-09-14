@@ -1,0 +1,11 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { $or: [ 
+    { _id: ObjectId("613f99008bfb78fefd0ba28f") }, 
+    { _id: ObjectId("613f99008bfb78fefd0ba291") },
+    ]},
+  {
+    $max: { imdbRating: 17 }, 
+  },
+);

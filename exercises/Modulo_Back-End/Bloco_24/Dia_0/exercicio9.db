@@ -1,0 +1,9 @@
+use("movies_database");
+
+db.collection.updateMany(
+  { _id: ObjectId("613f99008bfb78fefd0ba290")},
+  { 
+    $max: { imdbRating: 8.6 }, 
+    $set: { "category.1": "thriller" } 
+  },
+);
