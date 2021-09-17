@@ -1,11 +1,9 @@
 use("agg_example");
-db.transactions.aggregate(
-  [
-    { 
-      $project : {
-          _id: "$bank",
-          bank: 1,
-      },
-    }
-  ]
-);
+db.transactions.aggregate([
+  {
+    $project: {
+      _id: "$bank",
+      bank: 1,
+    },
+  },
+]);
