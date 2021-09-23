@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./$npm_package_config_path"
+    "start": "node index.js"
   },
   "author": "Miguel Campos",
   "license": "ISC",
   "dependencies": {
+    "console-clear": "^1.1.1",
     "readline-sync": "^1.4.10"
   }
 }
