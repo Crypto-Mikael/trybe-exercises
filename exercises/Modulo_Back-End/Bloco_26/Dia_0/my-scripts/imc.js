@@ -6,11 +6,10 @@ const calculadoraDeIMC = () => {
   const peso = readline.questionInt("Qual seu peso em KG? ");
   const altura = readline.questionInt("Qual sua altura em CM? ");
   const IMC = (peso / Math.pow(altura / 100, 2)).toFixed(2);
-  calculadoraDeGrauDeObesidade(IMC);
-  return console.log(
-    `O seu Indice de Massa Corporal é ${IMC}`
+  return (
+    calculadoraDeGrauDeObesidade(IMC) &&
+    console.log(`O seu Indice de Massa Corporal é ${IMC}`)
   );
-
 };
 
 const calculadoraDeGrauDeObesidade = (IMC) => {
@@ -28,7 +27,7 @@ const calculadoraDeGrauDeObesidade = (IMC) => {
   } else if (IMC > 40.0) {
     situacao = "Obesidade grau II e IV";
   }
-  console.log(`Seu grau é ${situacao}`)
-}
+  console.log(`Seu grau é ${situacao}`);
+};
 
 calculadoraDeIMC();
