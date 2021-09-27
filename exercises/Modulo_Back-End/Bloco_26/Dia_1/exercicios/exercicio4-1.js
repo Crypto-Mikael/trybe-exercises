@@ -1,13 +1,15 @@
-const simpsons = require("./simpsons.json");
+const fs = require("fs").promises;
 
-function returnAllJSON() {
-  const promise = new Promise((resolve, reject) => {
-    if (!simpsons) reject(new Error("JSON not found"));
-    const reWrite = simpsons.map(({ id, name }) => `${id} - ${name}`);
-    const result = reWrite.forEach((item) => console.log(item));
-    resolve(result);
-  });
-  return promise;
+async function returnAllJSON() {
+  const simpsons = await fs
+    .readFile("./simpsons.json", "utf-8")
+    .then((fileContent) => {
+      const result = JSON.parse(fileContent);
+      return result;
+    });
+  const reWrite = simpsons.map(({ id, name }) => `${id} - ${name}`);
+  const result = reWrite.forEach((item) => console.log(item));
+  return result;
 }
 
 try {

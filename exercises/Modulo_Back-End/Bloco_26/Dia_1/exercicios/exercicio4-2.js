@@ -1,25 +1,21 @@
 const readline = require("readline-sync");
-const simpsons = require("./simpsons.json");
+const fs = require("fs").promises;
 
-function simpsonsIdReturn() {
-  const promise = new Promise((resolve, reject) => {
-    const idPerson = readline.questionInt(
-      "Qual o id do personagem você deseja? "
-    );
-    if (idPerson > 10 || idPerson < 0)
-      reject(new Error("Digite um numero entre 1-10 "));
-
-    const result = simpsons.filter(
-      (person) => Number(person.id) === Number(idPerson)
-    );
-    resolve(console.log(`${result[0].id} - ${result[0].name}`));
-  });
-
-  return promise;
+async function returnAllJSON(idFromCharacter) {
+  const simpsons = await fs
+    .readFile("./simpsons.json", "utf-8")
+    .then((fileContent) => {
+      const result = JSON.parse(fileContent);
+      return result;
+    });
+  const result = simpsons.filter((person) => Number(person.id) === Number(idFromCharacter))[0];
+  if (!result) throw new Error('id não Encontrado')
+  return (`${result.id} - ${result.name}`);
 }
 
 try {
-  simpsonsIdReturn().then((result) => result);
+  returnAllJSON(14)
+    .then((result) => console.log(result))
 } catch (err) {
-  console.log(`err: ${err}`);
+  console.log(`err: ${err.menssage}`)
 }
