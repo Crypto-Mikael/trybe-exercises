@@ -1,26 +1,33 @@
-const { calculaSituacao } = require('./index');
+const fs = require('fs');
+const sinon = require('sinon');
 const { expect } = require('chai');
 
-describe('Quando a média for menor que 7', () => {
-  it('retorna "reprovado"', () => {
-    const resposta = calculaSituacao(4);
+const leArquivo = require('./index');
 
-    expect(resposta).to.be.equals('reprovado');
+const CONTEUDO_DO_ARQUIVO = 'VQV com TDD';
+
+sinon.stub(fs, 'readFileSync').returns(CONTEUDO_DO_ARQUIVO);
+
+describe('leArquivo', () => {
+  describe('Quando o arquivo existe', () => {
+    describe('a resposta', () => {
+      const resposta = leArquivo('arquivo.txt');
+
+      it('é uma string', () => {
+        expect(resposta).to.be.a('string');
+      });
+
+      it('é igual ao conteúdo do arquivo', () => {
+        expect(resposta).to.be.equals(CONTEUDO_DO_ARQUIVO);
+      });
+    });
   });
-});
 
-describe('Quando a média for maior que 7', () => {
-  it('retorna "aprovado"', () => {
-    const resposta = calculaSituacao(9);
+  describe('Quando o arquivo não existe', () => {
+    it('a resposta é igual a "null"', () => {
+      const resposta = leArquivo('arquivo_que_nao_existe.txt');
 
-    expect(resposta).to.be.equals('aprovado');
-  });
-});
-
-describe('Quando a média for igual a 7', () => {
-  it('retorna "aprovado"', () => {
-    const resposta = calculaSituacao(7);
-
-    expect(resposta).to.be.equals('aprovado');
+      expect(resposta).to.be.equal(null);
+    });
   });
 });
