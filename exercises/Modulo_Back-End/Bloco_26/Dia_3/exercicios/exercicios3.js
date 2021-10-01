@@ -6,8 +6,12 @@ const port = 3000;
 app.use(bodyParse.json());
 
 app.post('/hello', (req, res) => {
-  const { nome } = req.body;
-  res.status(201).json({message: `Hello, ${nome}`});
+  const { nome, age } = req.body;
+  if (Number(age) > 17) {
+    return res.status(201).json({ message: `Hello, ${nome}` });
+  } else {
+    return res.status(401).json({ message: "Unauthoried" });
+  }
 });
 
 app.listen(port, () => {
