@@ -1,12 +1,12 @@
 const express = require('express');
+const authorRoutes = require('./routes/authorsRoute');
+
 const app = express();
 const port = 3000;
-const { getAll } = require('./models/author');
 
 
-app.get('/authors', async (_req, res) => {
-  const authors = await getAll();
+app.use(express.json());
 
-  res.status(200).json(authors)
-});
+app.use('/authors', authorRoutes);
+
 app.listen(port, () => console.log(`Example app listening on ${port}!`));
