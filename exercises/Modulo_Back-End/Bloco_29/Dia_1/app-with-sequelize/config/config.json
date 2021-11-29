@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "mikael",
+    "password": "&d27082020&",
+    "database": "orm_example",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
