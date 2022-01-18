@@ -1,7 +1,11 @@
-n = 5
+namesList = ["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]
 
-def makeSquare(l):
-  for i in range(l):
-    print('#' * (i + 1))
+def LarWord(list):
+  result = ""
+  for i in range(len(list)):
+    curr = list[i]
+    if(len(curr) > len(result)):
+      result = curr
+  return result
 
-makeSquare(n)
+print(LarWord(namesList))
