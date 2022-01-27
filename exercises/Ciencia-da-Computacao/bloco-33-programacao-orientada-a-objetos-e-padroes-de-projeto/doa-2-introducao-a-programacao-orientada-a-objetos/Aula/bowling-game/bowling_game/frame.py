@@ -11,13 +11,19 @@ class Frame:
         self.type = FrameTypes.UNPLAYED
 
     def play(self):
-        self.first_roll = self._roll()
-        pins_left = self.PINS - self.first_roll
-        self.second_roll = self._roll(pins_left) if self.first_roll < 10 else 0
+        self.first_roll, self.second_roll = self._consecutive_rolls()
         self.__check_type()
 
     def pins(self):
         return self.first_roll + self.second_roll
+
+    @classmethod
+    def _consecutive_rolls(cls):
+        first_roll = cls._roll()
+        pins_left = cls.PINS - first_roll
+        second_roll = cls._roll(pins_left) if first_roll < 10 else 0
+
+        return first_roll, second_roll
 
     @classmethod
     def _roll(cls, pins_left=PINS):
@@ -30,6 +36,25 @@ class Frame:
             self.type = FrameTypes.SPARE
         else:
             self.type = FrameTypes.REGULAR
+
+
+class TenthFrame(Frame):
+    def __init__(self):
+        super().__init__()
+        self.third_roll = 0
+
+    def pins(self):
+        return super().pins() + self.third_roll
+
+    def play(self):
+        super().play()
+
+        if self.type == FrameTypes.SPARE:
+            self.third_roll = self._roll()
+        elif self.type == FrameTypes.STRIKE:
+            self.second_roll, self.third_roll = self._consecutive_rolls()
+            if self.second_roll == self.PINS:
+                self.third_roll = self._roll()
 
 
 class FrameTypes(Enum):
